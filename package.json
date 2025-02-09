@@ -1,0 +1,27 @@
+{
+  "name": "messaging-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "watch": "nodemon ./src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kociotrzeci/messaging-board.git"
+  },
+  "author": "kociotrzeci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kociotrzeci/messaging-board/issues"
+  },
+  "homepage": "https://github.com/kociotrzeci/messaging-board#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "npx": "^10.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
