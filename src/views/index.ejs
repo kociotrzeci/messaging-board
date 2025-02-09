@@ -5,13 +5,14 @@
       <button>ADD NEW MESSAGE</button>
     </a>
     <ul>
-      <% messages.forEach((message) => { %>
+      <% for (let i = messages.length - 1; i >= 0; i--) {const message =
+      messages[i]; %>
       <li>
         <h5><%- message.user %></h5>
         <p><%= message.text %></p>
-        <time datetime="<%= message.added %>"><%= message.added %></time>
+        <time datetime="<%= message.added %>"><%= message.added %>"></time>
       </li>
-      <% }) %>
+      <% } %>
     </ul>
   </body>
 </html>
