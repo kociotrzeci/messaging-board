@@ -8,9 +8,11 @@
       <% for (let i = messages.length - 1; i >= 0; i--) {const message =
       messages[i]; %>
       <li>
-        <h5><%- message.user %></h5>
-        <p><%= message.text %></p>
-        <time datetime="<%= message.added %>"><%= message.added %>"></time>
+        <h5><%= message.username %></h5>
+        <p><%= message.message %></p>
+        <time datetime="<%= message.timestamp %>"
+          ><%= message.timestamp %>"></time
+        >
       </li>
       <% } %>
     </ul>

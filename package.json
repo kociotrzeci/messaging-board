@@ -17,9 +17,13 @@
   },
   "homepage": "https://github.com/kociotrzeci/messaging-board#readme",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "npx": "^10.2.2"
+    "express-validator": "^7.2.1",
+    "messaging-board": "file:",
+    "npx": "^10.2.2",
+    "pg": "^8.13.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

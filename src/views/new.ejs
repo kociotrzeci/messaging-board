@@ -3,10 +3,10 @@
     <h1>Messaging board</h1>
     <h2>Create new message</h2>
     <form method="POST" action="/new">
-      <label for="name">Name: </label>
-      <input type="text" name="name" />
+      <label for="username">Username: </label>
+      <input type="text" name="username" required />
       <label for="message">Message: </label>
-      <input type="text" name="message" />
+      <input type="text" name="message" required />
       <input type="submit" value="Submit" />
     </form>
   </body>
