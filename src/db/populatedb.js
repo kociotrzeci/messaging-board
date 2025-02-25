@@ -12,16 +12,16 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (username, message, timestamp) 
 VALUES
-  ('Bryan', 'test', CURRENT_TIMESTAMP),
+  ('Bryan', 'test', CURRENT_TIMESTAMP - INTERVAL '8 hours'),
   ('Odin', 'hello there', CURRENT_TIMESTAMP - INTERVAL '2 hours'),
-  ('kociotrzeci', 'i was here',  CURRENT_TIMESTAMP - INTERVAL '8 hours');
+  ('kocio', 'i was here',  CURRENT_TIMESTAMP);
 `;
 
 console.log(process.env.DB_NAME);
-async function main() {
+async function populateDB() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: `postgresql://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@localhost:5432/${process.env.DB_NAME}`,
+    connectionString: `postgresql://${process.env.PGUSER}:${process.env.PGPASSWORD}@${process.env.PGHOST}:${process.env.PGPORT}/${process.env.PGDATABASE}`,
   });
   await client.connect();
   await client.query(SQL);
@@ -29,4 +29,4 @@ async function main() {
   console.log("done");
 }
 
-main();
+module.exports = { populateDB };

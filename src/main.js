@@ -5,7 +5,9 @@ const PORT = 3000;
 const viewsPath = path.join(__dirname, "views");
 const publicPath = path.join(__dirname, "public");
 const { router } = require("./routers/routers.js");
+const { populateDB } = require("./db/populatedb.js");
 
+populateDB();
 app.set("views", viewsPath);
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
