@@ -4,9 +4,15 @@
     <h2>Create new message</h2>
     <form method="POST" action="/new">
       <label for="username">Username: </label>
-      <input type="text" name="username" required />
+      <input
+        type="text"
+        name="username"
+        required
+        minlength="1"
+        maxlength="10"
+      />
       <label for="message">Message: </label>
-      <input type="text" name="message" required />
+      <input type="text" name="message" required maxlength="1000" />
       <input type="submit" value="Submit" />
     </form>
   </body>
