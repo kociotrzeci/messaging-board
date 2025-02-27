@@ -6,7 +6,6 @@ const validator = [
 ];
 async function indexGet(req, res) {
   const messages = await db.getAllMessages();
-  console.log(messages);
   res.render("index", { messages: messages });
 }
 async function newGet(req, res) {
@@ -16,7 +15,7 @@ async function newPost(req, res) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     res.redirect("./");
-    console.log("is this executed?");
+    console.log("validation error");
   }
   console.log(
     "username: " + req.body.username + " message: " + req.body.message
